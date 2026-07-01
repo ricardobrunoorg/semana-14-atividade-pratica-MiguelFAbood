@@ -2,107 +2,13 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Loja de Jogos</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1e1e24;
-            color: #fff;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        h1 {
-            margin-bottom: 10px;
-            color: #00adb5;
-        }
-        .container {
-            width: 100%;
-            max-width: 500px;
-            background-color: #2a2a35;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-            margin-top: 20px;
-        }
-        canvas {
-            width: 100% !important;
-            height: auto !important;
-        }
-    </style>
+    <title>FGC Store - Home</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <h1>Loja de Games - Painel de Dados</h1>
-    <p>Distribuição do estoque por gênero de jogo</p>
-    
-    <div class="container">
-        <canvas id="graficoGeneros"></canvas>
-    </div>
-
-    <script>
-        // URL da sua API local gerada pelo JSON Server
-        const URL_API = 'http://localhost:3000/jogos';
-
-        async function carregarDadosEPlotarGrafico() {
-            try {
-                const response = await fetch(URL_API);
-                const jogos = await response.json();
-
-                const contagemGeneros = {};
-                jogos.forEach(jogo => {
-                    const genero = jogo.genero;
-                    if (contagemGeneros[genero]) {
-                        contagemGeneros[genero]++;
-                    } else {
-                        contagemGeneros[genero] = 1;
-                    }
-                });
-
-                const labelsGeneros = Object.keys(contagemGeneros);
-                const dadosQuantidades = Object.values(contagemGeneros);
-
-                const ctx = document.getElementById('graficoGeneros').getContext('2d');
-                new Chart(ctx, {
-                    type: 'pie', 
-                    data: {
-                        labels: labelsGeneros, 
-                        datasets: [{
-                            label: 'Quantidade de Jogos',
-                            data: dadosQuantidades,
-                            backgroundColor: [
-                                '#ff6384',
-                                '#36a2eb', 
-                                '#ffce56', 
-                                '#4bc0c0', 
-                                '#9966ff',
-                                '#ff9f40'  
-                            ],
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        plugins: {
-                            legend: {
-                                position: 'bottom',
-                                labels: { color: '#fff' }
-                            }
-                        }
-                    }
-                });
-
-            } catch (error) {
-                console.error('Erro ao buscar dados do JSON Server:', error);
-            }
-        }
-
-        // Executa a função assim que a página carrega
-        carregarDadosEPlotarGrafico();
-    </script>
+    <h1>Bem-vindo à FGC Store</h1>
+    <div id="card-container"></div>
+    <div><a href="charts.html">ver charts</a></div>
+    <script src="script.js"></script>
 </body>
 </html>

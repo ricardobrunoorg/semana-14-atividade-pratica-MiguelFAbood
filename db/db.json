@@ -15,4 +15,134 @@
       "email": "user@abc.com"
     }
   ]
+    ,
+    "jogos": [
+    {
+      "id": 1,
+      "titulo": "The King of Fighters 2002",
+      "descricaoCurta": "O ápice do combate em trios clássico.",
+      "descricaoCompleta": "KOF 2002 traz de volta o sistema de times 3v3 e o MAX Mode. Prepare-se para executar comandos precisos, como usar o movimento 632146C para fazer um DP com super buffer.",
+      "imagem": "https://upload.wikimedia.org/wikipedia/pt/2/29/The_King_of_Fighters_2002_capa.jpg",
+      "categoria": "Retro",
+      "preco": 40.00,
+      "tags": ["3v3", "SNK", "Arcade"],
+      "destaque": true
+    },
+    {
+      "id": 2,
+      "titulo": "Street Fighter III: 3rd Strike",
+      "descricaoCurta": "A obra-prima da animação 2D.",
+      "descricaoCompleta": "Famoso pelo sistema de Parry e animações fluidas. Uma curiosidade essencial para competidores: o boxeador Dudley não é mid tier; neste jogo, ele é firmemente um High Tier.",
+      "imagem": "https://upload.wikimedia.org/wikipedia/en/2/2c/SF3_Third_Strike_Arcade_Flyer.jpg",
+      "categoria": "Retro",
+      "preco": 60.00,
+      "tags": ["Capcom", "Parry", "Competitivo"],
+      "destaque": true
+    },
+    {
+      "id": 3,
+      "titulo": "Guilty Gear Strive",
+      "descricaoCurta": "Combate frenético com visual anime 2.5D.",
+      "descricaoCompleta": "A mais recente entrada da série Guilty Gear, com um sistema de Roman Cancel reformulado e focado em um estilo brawler incrivelmente agressivo.",
+      "imagem": "https://upload.wikimedia.org/wikipedia/en/9/95/Guilty_Gear_Strive_cover_art.jpg",
+      "categoria": "Anime Fighter",
+      "preco": 150.00,
+      "tags": ["Arc System Works", "Agressivo", "Rollback"],
+      "destaque": false
+    },
+    {
+      "id": 4,
+      "titulo": "BlazBlue Central Fiction",
+      "descricaoCurta": "A conclusão épica da saga de Ragna.",
+      "descricaoCompleta": "O último capítulo da série principal de BlazBlue, com mecânicas complexas, dezenas de personagens únicos e uma curva de aprendizado recompensadora.",
+      "imagem": "https://upload.wikimedia.org/wikipedia/en/6/67/BlazBlue_Central_Fiction_cover.jpg",
+      "categoria": "Anime Fighter",
+      "preco": 90.00,
+      "tags": ["Arc System Works", "Técnico", "Sprite 2D"],
+      "destaque": false
+    },
+    {
+      "id": 5,
+      "titulo": "The King of Fighters XV",
+      "descricaoCurta": "Shatter all expectations.",
+      "descricaoCompleta": "A evolução do KOF moderno, mantendo a essência do combate rápido em equipes com gráficos 3D e código de rede aprimorado para competições globais.",
+      "imagem": "https://upload.wikimedia.org/wikipedia/en/6/60/The_King_of_Fighters_XV_cover_art.jpg",
+      "categoria": "Luta 2.5D",
+      "preco": 200.00,
+      "tags": ["SNK", "3v3", "Moderno"],
+      "destaque": true
+    },
+    {
+      "id": 6,
+      "titulo": "Street Fighter 6",
+      "descricaoCurta": "A nova era das ruas.",
+      "descricaoCompleta": "A reinvenção da franquia com o sistema Drive, oferecendo novas opções agressivas e defensivas, além de modos de jogo inovadores.",
+      "imagem": "https://upload.wikimedia.org/wikipedia/en/4/4f/Street_Fighter_6_cover_art.jpg",
+      "categoria": "Luta 2.5D",
+      "preco": 250.00,
+      "tags": ["Capcom", "Drive System", "Popular"],
+      "destaque": true
+    },
+    {
+      "id": 7,
+      "titulo": "Tekken 8",
+      "descricaoCurta": "Fist meets fate.",
+      "descricaoCompleta": "A franquia de luta 3D retorna com visuais impressionantes na Unreal Engine 5 e mecânicas agressivas que incentivam a pressão constante no oponente.",
+      "imagem": "https://upload.wikimedia.org/wikipedia/en/7/7b/Tekken_8_cover_art.jpg",
+      "categoria": "Luta 3D",
+      "preco": 300.00,
+      "tags": ["Bandai Namco", "3D", "Mishima"],
+      "destaque": false
+    },
+    {
+      "id": 8,
+      "titulo": "Mortal Kombat 1",
+      "descricaoCurta": "Um universo renascido.",
+      "descricaoCompleta": "O recomeço do clássico violento, agora introduzindo o sistema de Kameos para expandir as opções de combos e defesa.",
+      "imagem": "https://upload.wikimedia.org/wikipedia/en/4/4b/Mortal_Kombat_1_cover_art.png",
+      "categoria": "Luta 2.5D",
+      "preco": 280.00,
+      "tags": ["NetherRealm", "Gore", "Kameo"],
+      "destaque": false
+    },
+    {
+      "id": 9,
+      "titulo": "Garou: Mark of the Wolves",
+      "descricaoCurta": "O ápice do Neo Geo.",
+      "descricaoCompleta": "O clássico cult que revolucionou a animação nos arcades com o sistema T.O.P. e o Just Defend, exigindo altíssimo nível de execução.",
+      "imagem": "https://upload.wikimedia.org/wikipedia/en/7/78/Garou_-_Mark_of_the_Wolves_Coverart.png",
+      "categoria": "Retro",
+      "preco": 30.00,
+      "tags": ["SNK", "Arcade", "Just Defend"],
+      "destaque": false
+    },
+    {
+      "id": 10,
+      "titulo": "Dragon Ball FighterZ",
+      "descricaoCurta": "Combate tag-team frenético.",
+      "descricaoCompleta": "Gráficos que parecem saídos do anime com uma jogabilidade frenética baseada em times de 3 e intensos combos aéreos.",
+      "imagem": "https://upload.wikimedia.org/wikipedia/en/2/22/Dragon_Ball_FighterZ_cover_art.jpg",
+      "categoria": "Anime Fighter",
+      "preco": 120.00,
+      "tags": ["Arc System Works", "Tag", "Licenciado"],
+      "destaque": false
+    },
+    {
+      "id": 11,
+      "titulo": "Guilty Gear XX Accent Core Plus",
+      "descricaoCurta": "O Pico da saga XX.",
+      "descricaoCompleta": "O que muitos acreditam ser o melhor anime fighter de todos os tempos, gráficos pixelizados e uma soundtrack de tirar o fôlego.",
+      "imagem": "https://pt.wikipedia.org/wiki/Guilty_Gear_XX#/media/Ficheiro:Guilty_Gear_XX_Accent_Core_Plus_-_North-american_cover.jpg",
+      "categoria": "Anime Fighter",
+      "preco": 15.00,
+      "tags": ["Arc System Works", "Técnico", "Sprite 2D"],
+      "destaque": false
+    }
+  ],
+  "categorias": [
+    { "id": 1, "nome": "Retro" },
+    { "id": 2, "nome": "Anime Fighter" },
+    { "id": 3, "nome": "Luta 2.5D" },
+    { "id": 4, "nome": "Luta 3D" }
+  ]
 }

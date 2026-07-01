@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - FGC Store</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e24;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            margin-bottom: 10px;
+            color: #00adb5;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background-color: #2a2a35;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+        }
+        canvas {
+            width: 100% !important;
+            height: auto !important;
+        }
+        .btn-voltar {
+            background-color: #393e46;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            align-self: flex-start;
+        }
+        .btn-voltar:hover {
+            background-color: #555b63;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="btn-voltar">⬅ Voltar para a Home</a>
+
+    <h1>FGC Store - Painel de Dados</h1>
+    <p>Distribuição do estoque por categoria de jogo</p>
+    
+    <div class="container">
+        <canvas id="graficoCategorias"></canvas>
+    </div>
+
+    <script>
+        const URL_API = 'http://localhost:3000/jogos';
+
+        async function carregarDadosEPlotarGrafico() {
+            try {
+                const response = await fetch(URL_API);
+                const jogos = await response.json();
+
+                const contagemCategorias = {};
+                jogos.forEach(jogo => {
+                    const categoria = jogo.categoria;
+                    if (contagemCategorias[categoria]) {
+                        contagemCategorias[categoria]++;
+                    } else {
+                        contagemCategorias[categoria] = 1;
+                    }
+                });
+
+                const labelsCategorias = Object.keys(contagemCategorias);
+                const dadosQuantidades = Object.values(contagemCategorias);
+
+                const ctx = document.getElementById('graficoCategorias').getContext('2d');
+                new Chart(ctx, {
+                    type: 'pie', 
+                    data: {
+                        labels: labelsCategorias, 
+                        datasets: [{
+                            label: 'Quantidade de Jogos',
+                            data: dadosQuantidades,
+                            backgroundColor: [
+                                '#ff6384', // Retro
+                                '#36a2eb', // Anime Fighter
+                                '#ffce56', // Luta 2.5D
+                                '#4bc0c0', // Luta 3D
+                                '#9966ff',
+                                '#ff9f40'  
+                            ],
+                            borderWidth: 1,
+                            borderColor: '#2a2a35'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: { color: '#fff', font: { size: 14 } }
+                            }
+                        }
+                    }
+                });
+
+            } catch (error) {
+                console.error('Erro ao buscar dados do JSON Server:', error);
+            }
+        }
+        carregarDadosEPlotarGrafico();
+    </script>
+</body>
+</html>
