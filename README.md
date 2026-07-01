@@ -1,24 +1,50 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/jLbvBzzN)
+# FGC Store - Catálogo Dinâmico e Dashboard
 
-# Trabalho Prático - Semana 14
+**Nome:** Miguel F. Abood  
+**Matrícula:** [COLOQUE SUA MATRÍCULA AQUI]  
+**Disciplina:** Desenvolvimento de Interfaces Web
 
-A partir dos dados que você tem no seu projeto, vamos trabalhar formas de apresentação que representem de forma clara e interativa essas informações. Você poderá usar gráficos (barra, linha, pizza), mapas, calendários ou outras formas de visualização. Seu desafio é entregar uma página Web que organize, processe e exiba os dados de forma compreensível e esteticamente agradável.
+---
 
-Com base nos tipos de projetos escohidos, você deve propor **visualizações que estimulem a interpretação, agrupamento e exibição criativa dos dados**, trabalhando tanto a lógica quanto o design da aplicação.
+## Sobre o Projeto
+Este projeto é uma aplicação front-end que simula uma loja de videogames. Ele consome uma API RESTful local utilizando o **JSON Server** e apresenta os dados de forma dinâmica. O projeto conta com a listagem de jogos (Home), uma página de detalhes gerada dinamicamente via `URLSearchParams` (QueryString) e um painel de dados interativo utilizando a biblioteca **Chart.js**.
 
-Sugerimos o uso das seguintes ferramentas acessíveis: [FullCalendar](https://fullcalendar.io/), [Chart.js](https://www.chartjs.org/), [Mapbox](https://docs.mapbox.com/api/), para citar algumas.
+---
 
-## Informações do trabalho
+## Estrutura de Dados (`db.json`)
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+O banco de dados do projeto possui duas coleções principais:
+* **`jogos`**: A coleção principal que abriga os produtos da loja. Cada item contém ID, título, descrições (curta e completa), URL da imagem, categoria, preço e um array de tags.
+* **`categorias`**: Coleção de suporte que lista as categorias disponíveis (Retro, Anime Fighter, Luta 2.5D, Luta 3D).
 
-**Print da tela com a implementação**
+### 💡 Exemplo de um registro da coleção `jogos`:
+```json
+{
+  "id": 2,
+  "titulo": "Street Fighter III: 3rd Strike",
+  "descricaoCurta": "A obra-prima da animação 2D.",
+  "descricaoCompleta": "Famoso pelo sistema de Parry e animações fluidas. Uma curiosidade essencial para competidores: o boxeador Dudley não é mid tier; neste jogo, ele é firmemente um High Tier.",
+  "imagem": "[https://upload.wikimedia.org/wikipedia/en/2/2c/SF3_Third_Strike_Arcade_Flyer.jpg](https://upload.wikimedia.org/wikipedia/en/2/2c/SF3_Third_Strike_Arcade_Flyer.jpg)",
+  "categoria": "Retro",
+  "preco": 60.00,
+  "tags": ["Capcom", "Parry", "Competitivo"],
+  "destaque": true
+}
 
-<< Coloque aqui uma breve explicação da implementação feita nessa etapa>>
+Demonstração da Aplicação
 
-<<  COLOQUE A IMAGEM TELA 1 AQUI >>
+(As imagens abaixo demonstram o funcionamento do consumo da API e a geração do gráfico dinâmico)
+Tela Inicial (Home)
+Página de Detalhes do Jogo
+Dashboard (Chart.js) - Print 1
+Dashboard (Chart.js) - Print 2 (Após alteração no banco)
 
-<<  COLOQUE A IMAGEM TELA 2 AQUI >>
+Tecnologias Utilizadas
+
+    HTML5 & CSS3: Estrutura e estilização das páginas.
+
+    JavaScript (Vanilla): Lógica de requisições assíncronas (Fetch API) e manipulação do DOM.
+
+    JSON Server: Simulação de backend e API RESTful local.
+
+    Chart.js: Biblioteca externa para a renderização do gráfico de pizza (Dashboard).
