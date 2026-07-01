@@ -1,7 +1,6 @@
 # FGC Store - Catálogo Dinâmico e Dashboard
 
 **Nome:** Miguel F. Abood  
-**Matrícula:** [COLOQUE SUA MATRÍCULA AQUI]  
 **Disciplina:** Desenvolvimento de Interfaces Web
 
 ---
@@ -30,14 +29,21 @@ O banco de dados do projeto possui duas coleções principais:
   "tags": ["Capcom", "Parry", "Competitivo"],
   "destaque": true
 }
-
+```
 Demonstração da Aplicação
 
 (As imagens abaixo demonstram o funcionamento do consumo da API e a geração do gráfico dinâmico)
-Tela Inicial (Home)
-Página de Detalhes do Jogo
-Dashboard (Chart.js) - Print 1
-Dashboard (Chart.js) - Print 2 (Após alteração no banco)
+### Tela Inicial (Home)
+![Tela Inicial listando os jogos](home.png)
+
+### Página de Detalhes do Jogo
+![Tela de detalhes de um jogo específico](detalhes.png)
+
+### Dashboard (Chart.js) - Print 1
+![Gráfico de pizza com a distribuição inicial de categorias](print1.png)
+
+### Dashboard (Chart.js) - Print 2 (Após alteração no banco)
+![Gráfico de pizza refletindo as alterações feitas no JSON Server](print2.png)
 
 Tecnologias Utilizadas
 
