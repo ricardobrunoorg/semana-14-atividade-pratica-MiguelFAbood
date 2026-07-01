@@ -29,7 +29,7 @@ O banco de dados do projeto possui duas coleções principais:
   "tags": ["Capcom", "Parry", "Competitivo"],
   "destaque": true
 }
-
+```
 Demonstração da Aplicação
 
 (As imagens abaixo demonstram o funcionamento do consumo da API e a geração do gráfico dinâmico)
